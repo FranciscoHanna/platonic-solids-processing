@@ -25,7 +25,7 @@ class Icosaedro extends SolidoPlatonico {
     init();
   }
 
-  // calculate geometry
+  // Calcular Geometria
   void init() {
     c = dist(cos(0)*radio, sin(0)*radio, cos(radians(72))*radio, sin(radians(72))*radio);
     b = radio;
@@ -46,12 +46,12 @@ class Icosaedro extends SolidoPlatonico {
     bottomPoint = new PVector(0, 0, -(triHt/2.0f+a));
   }
 
-  // draws icosaedro 
+  // Mostrar Icosaedro 
   void crear() {
     translate(transX, transY, transZ);
     rotar();
     
-    // vertexes
+    // Vertices
     if (verticeRadio > 0) {
       for (int i=0; i<5; i++) {
         verticeEsfera(topPent[i].x, topPent[i].y, topPent[i].z, verticeRadio);

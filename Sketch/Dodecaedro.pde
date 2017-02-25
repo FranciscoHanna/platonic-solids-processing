@@ -20,7 +20,7 @@ class Dodecaedro extends SolidoPlatonico{
     init();
   }
 
-  // calculate geometry
+  // Calcular Geometria
   void init(){
     a = radio/1.618033989;
     b = radio;
@@ -62,12 +62,12 @@ class Dodecaedro extends SolidoPlatonico{
     faces[11] = new int[] {15, 7, 19, 18, 6};
   }
 
-  // draws dodecahedron 
+  // Mostrar Dodecaedro 
   void crear(){
     translate(transX, transY, transZ);
     rotar();
     
-    // vertexes
+    // Vertices
     if(verticeRadio > 0)
     {
       for(int i=0;i<20;i++)

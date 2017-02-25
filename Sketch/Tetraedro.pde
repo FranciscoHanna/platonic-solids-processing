@@ -19,28 +19,24 @@ class Tetraedro extends SolidoPlatonico {
     init();
   }
 
-  //(±1, −1/√3, −1/√6)
-  //(0, 2/√3, −1/√6)
-  //(0, 0, 3/√6)
-
   void init() {
     float a = radio;
-    vert[0] = new PVector(a, -a/sqrt(3), -a/sqrt(6));  // vertex 1
-    vert[1] = new PVector(-a, -a/sqrt(3), -a/sqrt(6));    // vertex 2
-    vert[2] = new PVector(0, 2*a/sqrt(3), -a/sqrt(6));  // vertex 3
-    vert[3] = new PVector(0, 0, 3*a/sqrt(6) );   // vertex 4
+    vert[0] = new PVector(a, -a/sqrt(3), -a/sqrt(6)); 
+    vert[1] = new PVector(-a, -a/sqrt(3), -a/sqrt(6));  
+    vert[2] = new PVector(0, 2*a/sqrt(3), -a/sqrt(6)); 
+    vert[3] = new PVector(0, 0, 3*a/sqrt(6) ); 
   }
 
   
 
-  // draws tetrahedron 
+  // Mostrar Tetraedro 
   void crear() {
     translate(transX, transY, transZ);
     rotar();
   
     rotateX(radians(90));
 
-    // vertexes
+    // Vertices
     if (verticeRadio > 0) {
       for (int i=0; i<4; i++)
         verticeEsfera(vert[i].x, vert[i].y, vert[i].z, verticeRadio);
